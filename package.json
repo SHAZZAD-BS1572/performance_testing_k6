@@ -9,5 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "@types/k6": "^0.50.1"
+  },
   "description": ""
 }
