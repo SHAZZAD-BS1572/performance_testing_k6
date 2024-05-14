@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:demo": "k6 run sample.js"
+    "test:demo": "k6 run sample.js",
+    "test:docker":"docker-compose run k6 run /scripts/sample.js"
   },
   "keywords": [],
   "author": "",
