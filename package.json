@@ -11,7 +11,7 @@
     "test:groupResultInJson": "k6 run --out json=test.json /scripts/group.js" ,
     "test:groupResultInCSV": "k6 run --out csv=test.csv /scripts/group.js" ,
     "test:groupResultInHtml": "k6 run --out html=result.html /scripts/group.js",
-    "test:klive": "powershell -Command \"$env:K6_WEB_DASHBOARD = 'true'; $env:K6_WEB_DASHBOARD_EXPORT='html-report.html'; k6 run /scripts/k6loadTesting.js\""
+    "test:klive": "powershell -Command \"$env:K6_WEB_DASHBOARD = 'true';k6 run /scripts/k6loadTesting.js\""
 
 
   },

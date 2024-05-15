@@ -20,7 +20,7 @@ var options = {
   // Key configurations for avg load test in this section
   stages: [{
     duration: "5s",
-    target: 15
+    target: 10
   }, // traffic ramp-up from 1 to 100 users over 5 minutes.
   {
     duration: "5s",

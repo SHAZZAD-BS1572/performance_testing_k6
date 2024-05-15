@@ -64,3 +64,7 @@ Group:
 
  chaiJs:
  csv json data
+
+
+
+     "test:klive": "powershell -Command \"$env:K6_WEB_DASHBOARD = 'true'; $env:K6_WEB_DASHBOARD_EXPORT='html-report.html'; k6 run /scripts/k6loadTesting.js\""
