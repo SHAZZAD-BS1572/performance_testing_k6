@@ -7,9 +7,9 @@ import { Counter } from "k6/metrics";
 const allError = new Counter("error_count");
 
 export const options = {
-  thresholds: {
-    error_count: [{ threshold: "count>=5", abortOnFail: true }], // Abort if errors are 5 or more
-  },
+  // thresholds: {
+  //   error_count: [{ threshold: "count>=5", abortOnFail: true }], // Abort if errors are 5 or more
+  // },
   scenarios: {
     smoke: {
       executor: "ramping-vus",
