@@ -20,6 +20,7 @@ export default () => {
   // Step1
   // Step2
   // etc.
+  //new
 };
 
 export function handleSummary(data) {
