@@ -19,15 +19,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var options = {
   // Key configurations for avg load test in this section
   stages: [{
-    duration: "5s",
-    target: 10
+    duration: "5m",
+    target: 5
   }, // traffic ramp-up from 1 to 100 users over 5 minutes.
   {
-    duration: "5s",
+    duration: "5m",
     target: 15
   }, // stay at 100 users for 30 minutes
   {
-    duration: "5s",
+    duration: "5m",
+    target: 15
+  }, {
+    duration: "5m",
     target: 5
   } // ramp-down to 0 users
   ]
