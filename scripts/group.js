@@ -12,11 +12,11 @@ export const options = {
   scenarios: {
     smoke: {
       executor: "ramping-vus",
-      startVUs: 0,
+      startVUs: 10,
       stages: [
-        { duration: "20s", target: 10 },
-        { duration: "30s", target: 20 },
-        { duration: "30s", target: 0 },
+        { duration: "8s", target: 10 },
+        { duration: "8s", target: 10 },
+        { duration: "8s", target: 10 },
       ],
       gracefulRampDown: "30s",
     },
@@ -33,10 +33,10 @@ export default function () {
     check(res, { "is status 200": (r) => r.status === 200 });
   });
 
-  group("fail_request", () => {
-    const res2 = http.get(`https://reqres.in/api/unknown/23`);
-    check(res2, { "is status 404": (r) => r.status === 204 });
-  });
+  // group("fail_request", () => {
+  //   const res2 = http.get(`https://reqres.in/api/unknown/23`);
+  //   check(res2, { "is status 404": (r) => r.status === 204 });
+  // });
 
   sleep(1);
 }

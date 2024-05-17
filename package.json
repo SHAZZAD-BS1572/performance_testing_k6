@@ -14,7 +14,9 @@
     "test:klive": "powershell -Command \"$env:K6_WEB_DASHBOARD = 'true'; $env:K6_WEB_DASHBOARD_EXPORT='html-report.html'; k6 run /scripts/k6loadTesting.js\"",
     "test:CSVdata":"k6 run /scripts/csvDataTest.js",
     "test:JSONdata":"k6 run /scripts/jsonDataTest.js",
-    "test:ksixJSONdata":"powershell -Command \"$env:K6_WEB_DASHBOARD = 'true'; $env:K6_WEB_DASHBOARD_EXPORT='html-report.html'; k6 run /scripts/csvDataTest.js"
+    "test:ksixJSONdata":"powershell -Command \"$env:K6_WEB_DASHBOARD = 'true'; $env:K6_WEB_DASHBOARD_EXPORT='html-report.html'; k6 run /scripts/csvDataTest.js",
+    "test:postRequest": "k6 run /scripts/postRequest.js"
+
   },
   "keywords": [],
   "author": "",

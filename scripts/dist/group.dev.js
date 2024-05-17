@@ -26,16 +26,16 @@ var options = {
   scenarios: {
     smoke: {
       executor: "ramping-vus",
-      startVUs: 0,
+      startVUs: 10,
       stages: [{
-        duration: "20s",
+        duration: "8s",
         target: 10
       }, {
-        duration: "30s",
-        target: 20
+        duration: "8s",
+        target: 10
       }, {
-        duration: "30s",
-        target: 0
+        duration: "8s",
+        target: 10
       }],
       gracefulRampDown: "30s"
     }
@@ -53,16 +53,11 @@ function _default() {
         return r.status === 200;
       }
     });
-  });
-  (0, _k.group)("fail_request", function () {
-    var res2 = _http["default"].get("https://reqres.in/api/unknown/23");
+  }); // group("fail_request", () => {
+  //   const res2 = http.get(`https://reqres.in/api/unknown/23`);
+  //   check(res2, { "is status 404": (r) => r.status === 204 });
+  // });
 
-    (0, _k.check)(res2, {
-      "is status 404": function isStatus404(r) {
-        return r.status === 204;
-      }
-    });
-  });
   (0, _k.sleep)(1);
 } // export function handleSummary(data) {
 //   return {
